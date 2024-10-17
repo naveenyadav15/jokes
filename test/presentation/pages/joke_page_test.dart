@@ -54,7 +54,6 @@ void main() {
         .emit(const RandomJokeLoaded(Joke(id: '123', joke: 'Funny joke!')));
     await tester.pump();
 
-    // Verify the joke text is displayed
     expect(find.text('Funny joke!'), findsOneWidget);
   });
 }
