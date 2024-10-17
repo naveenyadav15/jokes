@@ -25,7 +25,7 @@ void main() {
     test(
         'should emit [RandomJokeLoading, RandomJokeLoaded] when fetchRandomJoke is successful',
         () async {
-      final joke = const Joke(joke: 'This is a joke');
+      const joke = Joke(joke: 'This is a joke');
       when(() => mockGetRandomJoke()).thenAnswer((_) async => Right(joke));
 
       expectLater(
